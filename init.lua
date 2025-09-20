@@ -964,6 +964,18 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+  {
+    'hedyhli/outline.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>a', '<cmd>Outline<CR>', {
+        desc = 'Toggle Outline',
+      })
+
+      require('outline').setup {
+        -- Your setup opts here (leave empty to use defaults)
+      }
+    end,
+  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
